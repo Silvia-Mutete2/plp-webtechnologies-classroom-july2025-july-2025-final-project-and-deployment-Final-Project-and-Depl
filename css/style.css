@@ -1,0 +1,61 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+header { background: #1f1e1e; color: #fff; padding: 1rem; }
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin: 0 10px; }
+.nav-links a { color: #fff; text-decoration: none; }
+.nav-links a.active { border-bottom: 2px solid #51ecf1; }
+.menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 24px; }
+
+.hero { text-align: center; padding: 3rem; background: #f4a261; color: white; }
+.hero .btn {
+  background: linear-gradient(90deg, #51ecf1 0%, #f4a261 100%);
+  color: #222;
+  padding: 16px 40px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  margin-top: 2.5rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+  display: inline-block;
+}
+.hero .btn:hover {
+  background: linear-gradient(90deg, #e76f51 0%, #51ecf1 100%);
+  color: #fff;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+}
+
+.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 2rem; }
+.product-card { border: 1px solid #ccc; padding: 1rem; text-align: center; background: #fff; }
+.product-card img { max-width: 100%; border-radius: 5px; }
+
+form { max-width: 400px; margin: 2rem auto; display: flex; flex-direction: column; }
+form input, form textarea { margin-bottom: 1rem; padding: 10px; }
+form .btn {
+  background: #f4a261;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+form .btn:hover {
+  background: #e76f51;
+}
+
+footer { background: #222; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; flex-direction: column; background: #333; position: absolute; top: 60px; right: 0; width: 200px; }
+  .nav-links.show { display: flex; }
+  .menu-toggle { display: block; }
+}
